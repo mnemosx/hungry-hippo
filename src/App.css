@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: block;
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: 36px;
+  color: #e9aaca;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App.gameOver:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('./gameover.png') no-repeat center center;
+  animation: animatedBackground .5s linear infinite alternate, flyIn .7s linear;
+}
+
+@keyframes flyIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    opacity: .8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  text-align: left;
+  width: 650px;
+  vertical-align: bottom;
+  margin-block: 30px;
+}
+
+.hippo-header {
+  float: left;
+  width: 180px;
+  height: 180px;
+  padding-right: 30px;
+  margin-top: -28px;
+  background: url(./hippopotamus.png) no-repeat center center;
+}
+
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 300;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.blurred {
+  filter: blur(7px);
+  animation: blur 1.5s linear;
+}
+
+@keyframes blur {
+  from {
+    filter: blur(0)
+  }
+  to {
+    filter: blur(7px)
+  }
+}
+
+table td {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.219)
+}
+
+table td.snake {
+  background-color: #bcc3ce;
+  border-radius: 40%;
+  -webkit-box-shadow: 0px 0px 78px -20px rgba(128, 163, 184, 0.83);
+  -moz-box-shadow: 0px 0px 78px -20px rgba(128, 163, 184, 0.83);
+  box-shadow: 0px 0px 78px -20px rgba(128, 163, 184, 0.83);
+}
+
+table td.head:after {
+  content: '';
+  background-image: url(./hippo.svg);
+  position: absolute;
+  left: -15px;
+  bottom: -15px;
+  width: 65px;
+  height: 65px;
+}
+
+table td.apple:after {
+  content: '';
+  background-image: url("https://img.icons8.com/cotton/64/000000/gammon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: -15px;
+  bottom: -15px;
+  width: 65px;
+  height: 65px;
+}
