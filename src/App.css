@@ -21,7 +21,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('./gameover.png') no-repeat center center;
+  background: url('media/gameover.png') no-repeat center center;
   animation: animatedBackground .5s linear infinite alternate, flyIn .7s linear;
 }
 
@@ -56,7 +56,7 @@
   height: 180px;
   padding-right: 30px;
   margin-top: -28px;
-  background: url(./hippopotamus.png) no-repeat center center;
+  background: url(media/hippopotamus.png) no-repeat center center;
 }
 
 h1 {
@@ -101,7 +101,7 @@ table td.snake {
 
 table td.head:after {
   content: '';
-  background-image: url(./hippo.svg);
+  background-image: url(media/hippo.svg);
   position: absolute;
   left: -15px;
   bottom: -15px;
@@ -111,7 +111,7 @@ table td.head:after {
 
 table td.apple:after {
   content: '';
-  background-image: url("https://img.icons8.com/cotton/64/000000/gammon.png");
+  background-image: url("media/gammon.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;

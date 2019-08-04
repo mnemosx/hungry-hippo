@@ -93,7 +93,6 @@ const App: React.FC = () => {
 
   return (
     <div className={`App ${gameOver ? 'gameOver' : ''}`}>
-      {/* <div className={`App ${gameOver ? 'gameOver' : ''}`}> */}
       <div className="header">
         <div className="hippo-header"></div>
         <h1>The Hungry<br /> Hippo Game</h1>
@@ -110,7 +109,6 @@ const App: React.FC = () => {
               </tr>)}
         </tbody>
       </table>
-      {/* </div> */}
     </div >
   );
 }
